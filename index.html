@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+      <!-- Left: Brand Logo -->
+      <div class="flex items-center gap-4">
+        <h1 class="text-2xl font-bold text-blue-600">Brand</h1>
+      </div>
+
+      <!-- Middle: Search Bar -->
+      <div class="flex items-center gap-4 flex-grow max-w-2xl w-full">
+        <select class="border rounded-l-md px-3 py-2 text-gray-600 w-32">
+          <option>All categories</option>
+          <option>Electronics</option>
+          <option>Clothing</option>
+          <option>Sports</option>
+        </select>
+        <input type="text" placeholder="Search for products" class="border-t border-b px-4 py-2 w-full">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-r-md">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <!-- Right: Icons for Profile, Messages, Orders, Cart -->
+      <div class="flex items-center gap-4">
+        <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-500">
+          <i class="fas fa-user text-xl"></i>
+          <span class="text-sm">Profile</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-500">
+          <i class="fas fa-envelope text-xl"></i>
+          <span class="text-sm">Messages</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-500">
+          <i class="fas fa-box text-xl"></i>
+          <span class="text-sm">Orders</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-500">
+          <i class="fas fa-shopping-cart text-xl"></i>
+          <span class="text-sm">My Cart</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-white shadow-md border border-solid border-gray-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Left: Navigation Links -->
+      <div class="flex items-center gap-6">
+        <button class="lg:hidden text-gray-600 text-xl">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="hidden lg:flex gap-6 text-gray-600">
+          <li><a href="#" class="hover:text-blue-500">All Categories</a></li>
+          <li><a href="#" class="hover:text-blue-500">Hot Offers</a></li>
+          <li><a href="#" class="hover:text-blue-500">Gift Boxes</a></li>
+          <li><a href="#" class="hover:text-blue-500">Projects</a></li>
+          <li><a href="#" class="hover:text-blue-500">Menu Items</a></li>
+          <li><a href="#" class="hover:text-blue-500">Help</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Settings Links -->
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-2">
+          <a href="#" class="text-gray-600 hover:text-blue-500">English</a>
+          <span>|</span>
+          <a href="#" class="text-gray-600 hover:text-blue-500">USD</a>
+          <span>|</span>
+          <a href="#" class="text-gray-600 hover:text-blue-500 flex items-center">
+            <i class="fas fa-globe text-xl"></i>
+            <span class="ml-1">Ship to</span>
+          </a>
+        </div>
+        <button class="md:hidden text-gray-600 text-xl">
+          <i class="fas fa-ellipsis-h"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="lg:hidden bg-white border-t">
+      <ul class="flex flex-col gap-2 px-4 py-3 text-gray-600">
+        <li><a href="#" class="hover:text-blue-500">All Categories</a></li>
+        <li><a href="#" class="hover:text-blue-500">Hot Offers</a></li>
+        <li><a href="#" class="hover:text-blue-500">Gift Boxes</a></li>
+        <li><a href="#" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="#" class="hover:text-blue-500">Menu Items</a></li>
+        <li><a href="#" class="hover:text-blue-500">Help</a></li>
+        <li class="flex items-center gap-2 mt-2">
+          <a href="#" class="hover:text-blue-500">English</a>
+          <span>|</span>
+          <a href="#" class="hover:text-blue-500">USD</a>
+          <span>|</span>
+          <a href="#" class="hover:text-blue-500 flex items-center">
+            <i class="fas fa-globe text-lg"></i>
+            <span class="ml-1">Ship to</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+   <div class="section mt-5 p-2">
+    <!-- Main Container -->
+    <div class="container mx-auto flex flex-col lg:flex-row lg:space-x-4 shadow p-4">
+      <!-- Sidebar Navigation -->
+      <div class="lg:w-1/6 w-full  ">
+        <ul class="space-y-4 font-medium">
+          <li>Automobiles</li>
+          <li>Clothes and wears</li>
+          <li>Home interiors</li>
+          <li>Computer and tech</li>
+          <li>Tools and equipments</li>
+          <li>Sports and outdoor</li>
+          <li>Animal and pets</li>
+          <li>Machinery tools</li>
+          <li>More category</li>
+        </ul>
+      </div>
+  
+      <!-- Image Section -->
+      <div class="lg:w-full flex justify-center items-center ">
+        <img 
+        src="Images/pc-8.jpeg" 
+        srcset="Images/pc-8-small.jpeg 480w, Images/pc-8-medium.jpeg 768w, Images/pc-8.jpeg 1200w" 
+        sizes="(max-width: 600px) 480px, (max-width: 1200px) 768px, 1200px" 
+        alt="Item 1" 
+        class="w-full h-auto rounded-md mb-2 bg-gray-200 object-cover" 
+        loading="lazy">      </div>
+  
+      <!-- Sidebar Content -->
+      <div class="lg:w-1/4 w-full space-y-4">
+        <!-- User Info Card -->
+        <div class="bg-blue-100 shadow-lg rounded-lg p-4 flex items-center space-x-4">
+          <img src="https://via.placeholder.com/50" alt="Profile Image" class="w-12 h-12 mb-24 rounded-full"/>
+          <div class="text-gray-800">
+            <p class="font-semibold">Hi, user <br />let's get started</p>
+            <div class="mt-4 space-y-1">
+              <button class="w-full bg-blue-500 text-white  px-4 py-2  rounded hover:bg-blue-600">Join now  </button>           </button>
+              <button class="w-full bg-white text-blue-600  px-4 py-2 rounded hover:bg-green-600">Log in</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Promotional Cards -->
+        <div class="bg-orange-500 text-white text-center text-sm rounded-lg p-4">
+          <p>Get US $10 off <br />with a new <br />supplier</p>
+        </div>
+        <div class="bg-blue-500 text-white text-center text-sm rounded-lg p-4">
+          <p>Send quotes with <br />supplier <br />preferences</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <div class="container mx-auto px-1 py-2">
+    <div class="flex flex-wrap md:flex-nowrap ">
+    
+      <div class="flex-shrink-0 w-full md:w-2/6 bg-white border border-stone-200 p-6 ">
+        <h2 class="text-xl font-bold text-gray-800 ml-9 mt-6">Deals and Offers</h2>
+        <p class="text-gray-600 ml-9 mb-4">Hygiene Equipments</p>
+        <div class="flex gap-2 mt-7 ml-6">
+          <button class="bg-gray-500 text-white font-bold px-3 py-1 rounded hover:bg-blue-600">04 <br> Days</button>
+          <button class="bg-gray-500 text-white font-bold px-3 py-1 rounded hover:bg-blue-600">13 <br> Hours</button>
+          <button class="bg-gray-500 text-white font-bold px-3 py-1 rounded hover:bg-blue-600">2 <br> Min</button>
+          <button class="bg-gray-500 text-white font-bold px-3 py-1 rounded hover:bg-blue-600">5 <br> Sec</button>
+        </div>
+      </div>
+     
+      <div class="flex-1 bg-white p-4 border border-stone-200 shadow flex flex-col items-center">
+        <img src="Images/image-1 (3).jpeg" alt="Smartwatch" class="w-full h-auto rounded-md mb-2">
+        <h3 class="text-gray-800 font-medium">Smartwatch</h3>
+        <p class="text-gray-600 text-sm">From $19</p>
+      </div>
+      <div class="flex-1 bg-white p-4 border border-stone-200 shadow flex flex-col items-center">
+        <img src="Images/image-1 (2).jpeg" alt="Laptop" class="w-full h-auto rounded-md mb-2">
+        <h3 class="text-gray-800 font-medium">Laptop</h3>
+        <p class="text-gray-600 text-sm">From $599</p>
+      </div>
+      <div class="flex-1 bg-white p-4 border border-stone-200 shadow flex flex-col items-center">
+        <img src="Images/image-1 (4).png" alt="Camera" class="w-full h-auto rounded-md mb-2">
+        <h3 class="text-gray-800 font-medium">Camera</h3>
+        <p class="text-gray-600 text-sm">From $299</p>
+      </div>
+      <div class="flex-1 bg-white p-4 border border-stone-200 shadow flex flex-col items-center">
+        <img src="Images/image-1 (5).webp" alt="Headphones" class="w-full h-auto rounded-md mb-2">
+        <h3 class="text-gray-800 font-medium">Headphones</h3>
+        <p class="text-gray-600 text-sm">From $99</p>
+      </div>
+      <div class="flex-1 bg-white p-4 border border-stone-200 shadow flex flex-col items-center">
+        <img src="Images/image-1 (1).jpeg" alt="Phone" class="w-full h-auto rounded-md mb-2">
+        <h3 class="text-gray-800 font-medium">Phone</h3>
+        <p class="text-gray-600 text-sm">From $199</p>
+      </div>
+    </div>
+  </div> 
+
+  <div class="container mx-auto py-1 px-1">
+      <!-- Main Grid -->
+      <div class="grid grid-rows-1 md:grid-cols-5">
+        <!-- First Column (Spans Two Rows) -->
+        <div class="row-span-2 bg-yellow-200 p-4 flex flex-col justify-center items-center " >
+          <h2 class="text-lg font-bold text-gray-800 mb-2">Home and <br> Outdoor</h2>
+          <button class="bg-white text-gray-400 px-2 py-1 rounded transition-colors duration-500 ease-in-out transform hover:bg-yellow-500 hover:scale-105">Source Now</button>
+        </div>
+      
+  
+        <!-- Second Column -->
+        <div class="grid grid-rows-1 ">
+          <!-- Top Row -->
+          <div class="relative bg-white p-2 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Kitchen Chair <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$29</p> -->
+            <img src="Images/image-1 (6).jpeg" alt="Image 1" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <!-- Bottom Row -->
+          <div class="relative bg-white p-2 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Lamp <br> From <br> USD $19 </h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$39</p> -->
+            <img src="Images/image-1 (7).jpeg" alt="Image 2" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+        </div>
+  
+        <!-- Third Column -->
+        <div class="grid grid-rows-1 ">
+          <div class="relative bg-white p-2  border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Spoon Stand <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$49</p> -->
+            <img src="Images/image-1 (8).png" alt="Image 3" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <div class="relative bg-white p-2  border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Kitchen Chair <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$59</p> -->
+            <img src="Images/image-1 (9).jpeg" alt="Image 4" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+        </div>
+  
+        <!-- Fourth Column -->
+        <div class="grid grid-rows-1 ">
+          <div class="relative bg-white p-2  border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Plates set <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$69</p> -->
+            <img src="Images/image-1 (10).jpeg" alt="Image 5" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <div class="relative bg-white p-2 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1">Kitchen Blender <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$79</p> -->
+            <img src="Images/image-1 (11).jpeg" alt="Image 6" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+        </div>
+  
+        <!-- Fifth Column -->
+        <div class="grid grid-rows-1 ">
+          <div class="relative bg-white p-4 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Spoons <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$89</p> -->
+            <img src="Images/image-1 (6).jpeg" alt="Image 7" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <div class="relative bg-white border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1">Plates Set <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$99</p> -->
+            <img src="Images/image-1 (7).jpeg" alt="Image 7" class="w-20 h-20 object-cover ml-32 mt-24">
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Container 2 -->
+
+
+
+    <div class="container mx-auto py-1 px-1">
+      <!-- Main Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-5 ">
+        <!-- First Column (Spans Two Rows) -->
+        <div class="row-span-2 bg-gray-300 p-4 flex flex-col justify-center items-center ">
+          <h2 class="text-lg font-bold text-gray-800 mb-2">Consumer <br> Electronics and <br> Gadges</h2>
+          <button class="bg-white text-gray-500 px-4 py-2 rounded transition-colors duration-500 ease-in-out transform hover:bg-yellow-500 hover:scale-105">Source Now</button>
+        </div>
+  
+        <!-- Second Column -->
+        <div class="grid grid-rows-1 ">
+          <!-- Top Row -->
+          <div class="relative bg-white p-4 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Kitchen Chair <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$29</p> -->
+            <img src="Images/image-1 (6).jpeg" alt="Image 1" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <!-- Bottom Row -->
+          <div class="relative bg-white p-4 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Plates set <br> From <br> USD $19 </h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$39</p> -->
+            <img src="Images/image-1 (7).jpeg" alt="Image 2" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+        </div>
+  
+        <!-- Third Column -->
+        <div class="grid grid-rows-1 ">
+          <div class="relative bg-white p-4  border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Lamp <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$49</p> -->
+            <img src="Images/image-1 (8).png" alt="Image 3" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <div class="relative bg-white p-4  border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Blender <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$59</p> -->
+            <img src="Images/image-1 (9).jpeg" alt="Image 4" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+        </div>
+  
+        <!-- Fourth Column -->
+        <div class="grid grid-rows-1 ">
+          <div class="relative bg-white p-4  border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Camera <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$69</p> -->
+            <img src="Images/image-1 (4).png" alt="Image 5" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <div class="relative bg-white p-4 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1">Watch <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$79</p> -->
+            <img src="Images/image-1 (3).jpeg" alt="Image 6" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+        </div>
+  
+        <!-- Fifth Column -->
+        <div class="grid grid-rows-2 ">
+          <div class="relative bg-white p-4 border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1 ">Laptop <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$89</p> -->
+            <img src="Images/image-1 (2).jpeg" alt="Image 7" class="w-16 h-16 object-cover ml-32 mt-24">
+          </div>
+          <div class="relative bg-white border border-solid border-gray-200">
+            <h3 class="absolute top-6 left-6 text-gray-800 font-medium bg-white px-2 py-1">Mobile <br> From <br> USD $19</h3>
+            <!-- <p class="absolute bottom-2 right-2 text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded">$99</p> -->
+            <img src="Images/image-1 (1).jpeg" alt="Image 7" class="w-20 h-20 object-cover ml-32 mt-24">
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+<!-- Container with Background Image -->
+<div class="container mx-auto py-2 px-3">
+  <div class="absolute w-10/12 h-[80vh] md:h-[58vh] bg-cover bg-center  flex items-center px-96" 
+      style="background-image: url('Images/pc-2.png');">
+      <!-- Left Text Section -->
+      <div class="absolute left-6 md:left-12 top-1/2 transform -translate-y-1/2 w-2/3 md:w-1/2">
+          <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">Need Something Special?</h1>
+          <p class="text-lg md:text-xl text-white">Fill out the inquiry form and we will get back to you with the details.</p>
+      </div>
+
+      <!-- Right Form Section -->
+      <div class="absolute right-6 md:right-12 top-1/2 transform -translate-y-1/2 bg-white p-1 rounded-lg shadow-lg w-full sm:w-2/3 md:w-1/3">
+          <h2 class="text-2xl font-semibold mb-4 text-center">Inquiry Form</h2>
+          <form id="inquiryForm" class="space-y-4">
+              <!-- Item Name Input -->
+              <div>
+                  <label for="item" class="block text-sm font-medium text-gray-700">What item do you need?</label>
+                  <input type="text" id="item" name="item" placeholder="Enter item name"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2">
+              </div>
+
+              <!-- More Detail Input -->
+              <div>
+                  <label for="details" class="block text-sm font-medium text-gray-700">More details</label>
+                  <textarea id="details" name="details" rows="2" placeholder="Enter more details"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"></textarea>
+              </div>
+
+              <!-- Quantity and Pieces (Inline Fields) -->
+              <div class="flex gap-4">
+                  <div class="flex-1">
+                      <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                      <input type="number" id="quantity" name="quantity" placeholder="Enter quantity"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2">
+                  </div>
+                  <div class="flex-1">
+                      <label for="pcs" class="block text-sm font-medium text-gray-700">Pcs</label>
+                      <input type="number" id="pcs" name="pcs" placeholder="Enter pcs"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2">
+                  </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-center">
+                  <button type="button" id="sendInquiry"
+                      class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+                      Send Inquiry
+                  </button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+<br><br>
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-96">
+        <!-- Section Title -->
+        <h2 class="text-3xl font-semibold  mb-6 text-gray-800">Recommended Items</h2>
+
+        <!-- Responsive Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- Sample Grid Item -->
+            <div class="bg-white p-1 rounded-lg shadow-md flex flex-col items-center text-center">
+              <img src="Images/image-1 (1).jpeg" alt="Item 2" class="w-full h-52 object-cover rounded-md mb-2">
+              <h3 class="font-semibold text-lg text-gray-700">Item 1</h3>
+                <p class="text-sm text-gray-500">$20.00</p>
+            </div>
+
+            <!-- Repeat for 10 items -->
+            <div class="bg-white px-1 py-2 rounded-lg shadow-md flex flex-col items-center text-center">
+                <img src="Images/image-1 (8).png" alt="Item 2" class="w-full h-52 object-cover rounded-md mb-2">
+                <h3 class="font-semibold text-lg text-gray-700">Item 2</h3>
+                <p class="text-sm text-gray-500">$25.00</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+                <img src="Images/image-1 (11).jpeg" alt="Item 3" class="w-full h-52 object-cover rounded-md mb-2">
+                <h3 class="font-semibold text-lg text-gray-700">Item 3</h3>
+                <p class="text-sm text-gray-500">$15.00</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+                <img src="Images/image-1 (12).jpg" alt="Item 4" class="w-full h-52 object-cover rounded-md mb-2">
+                <h3 class="font-semibold text-lg text-gray-700">Item 4</h3>
+                <p class="text-sm text-gray-500">$18.00</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+                <img src="Images/image-1 (16).webp" alt="Item 5" class="w-full h-52 object-cover rounded-md mb-2">
+                <h3 class="font-semibold text-lg text-gray-700">Item 5</h3>
+                <p class="text-sm text-gray-500">$30.00</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+                <img src="Images/image-1 (2).jpeg" alt="Item 6" class="w-full h-52 object-cover rounded-md mb-2">
+                <h3 class="font-semibold text-lg text-gray-700">Item 6</h3>
+                <p class="text-sm text-gray-500">$22.00</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+              <img src="Images/image-1 (3).jpeg" alt="Item 6" class="w-full h-52 object-cover rounded-md mb-2">
+              <h3 class="font-semibold text-lg text-gray-700">Item 6</h3>
+              <p class="text-sm text-gray-500">$22.00</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+            <img src="Images/image-1 (2).jpeg" alt="Item 6" class="w-full h-52 object-cover rounded-md mb-2">
+            <h3 class="font-semibold text-lg text-gray-700">Item 6</h3>
+            <p class="text-sm text-gray-500">$22.00</p>
+        </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+                <img src="Images/image-1 (5).webp" alt="Item 9" class="w-full h-52 object-cover rounded-md mb-2">
+                <h3 class="font-semibold text-lg text-gray-700">Item 9</h3>
+                <p class="text-sm text-gray-500">$19.00</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center">
+              <img src="Images/image-1 (2).jpeg" alt="Item 6" class="w-full h-52 object-cover rounded-md mb-2">
+              <h3 class="font-semibold text-lg text-gray-700">Item 6</h3>
+              <p class="text-sm text-gray-500">$22.00</p>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="container mx-auto p-1 -mt-80">
+      <!-- Section Title -->
+      <h2 class="text-3xl font-bold  mb-8 text-gray-800">Our Extra Services</h2>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Service 1 -->
+          <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden">
+              <!-- Image -->
+              <img src="Images/pc-5.jpg" alt="Service 1" 
+                  class="w-full h-48 object-cover">
+              <!-- Service Name -->
+              <div class="p-4 text-center">
+                  <h3 class="text-lg font-semibold text-gray-700">Service 1</h3>
+              </div>
+              <!-- Icon in Circle -->
+              <div class="absolute bottom-8 right-4 bg-blue-600 text-white p-3 rounded-full flex items-center justify-center shadow-lg">
+                  <!-- Example Icon (FontAwesome or SVG) -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                  </svg>
+              </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden">
+              <img src="Images/pc-6.jpg" alt="Service 2" 
+                  class="w-full h-48 object-cover">
+              <div class="p-4 text-center">
+                  <h3 class="text-lg font-semibold text-gray-700">Service 2</h3>
+              </div>
+              <div class="absolute bottom-8 right-4 bg-green-600 text-white p-3 rounded-full flex items-center justify-center shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                  </svg>
+              </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden">
+              <img src="Images/pc-7.webp" alt="Service 3" 
+                  class="w-full h-48 object-cover">
+              <div class="p-4 text-center">
+                  <h3 class="text-lg font-semibold text-gray-700">Service 3</h3>
+              </div>
+              <div class="absolute bottom-8 right-4 bg-yellow-500 text-white p-3 rounded-full flex items-center justify-center shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  </svg>
+              </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden">
+              <img src="Images/pc-9.png" alt="Service 4" 
+                  class="w-full h-48 object-cover">
+              <div class="p-4 text-center">
+                  <h3 class="text-lg font-semibold text-gray-700">Service 4</h3>
+              </div>
+              <div class="absolute bottom-8 right-4 bg-red-600 text-white p-3 rounded-full flex items-center justify-center shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
+                  </svg>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!-- Supplier by Origin Container -->
+<div class="container mx-auto px-4 py-8">
+  <!-- Section Title -->
+  <h2 class="text-3xl font-bold  mb-8 text-gray-800">Supplier by Origin</h2>
+
+  <!-- Origins Wrapper -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      
+      <!-- Origin 1 -->
+      <div class="flex items-center space-x-4">
+          <!-- Flag -->
+          <img src="https://flagcdn.com/w160/us.png" alt="USA Flag" class="w-10 h-7 object-cover">
+          <!-- Country Text -->
+          <div>
+              <h3 class="text-gray-700 font-semibold">United States</h3>
+              <p class="text-gray-500 text-sm">www.usa-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 2 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/fr.png" alt="France Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">France</h3>
+              <p class="text-gray-500 text-sm">www.france-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 3 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/de.png" alt="Germany Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">Germany</h3>
+              <p class="text-gray-500 text-sm">www.germany-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 4 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/jp.png" alt="Japan Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">Japan</h3>
+              <p class="text-gray-500 text-sm">www.japan-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 5 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/cn.png" alt="China Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">China</h3>
+              <p class="text-gray-500 text-sm">www.china-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 6 -->
+      <div class="flex items-center space-x-4" >
+          <img src="https://flagcdn.com/w160/in.png" alt="India Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">India</h3>
+              <p class="text-gray-500 text-sm">www.india-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 7 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/it.png" alt="Italy Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">Italy</h3>
+              <p class="text-gray-500 text-sm">www.italy-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 8 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/gb.png" alt="UK Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">United Kingdom</h3>
+              <p class="text-gray-500 text-sm">www.uk-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 9 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/au.png" alt="Australia Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">Australia</h3>
+              <p class="text-gray-500 text-sm">www.australia-suppliers.com</p>
+          </div>
+      </div>
+
+      <!-- Origin 10 -->
+      <div class="flex items-center space-x-4">
+          <img src="https://flagcdn.com/w160/za.png" alt="South Africa Flag" class="w-10 h-7 object-cover">
+          <div>
+              <h3 class="text-gray-700 font-semibold">South Africa</h3>
+              <p class="text-gray-500 text-sm">www.southafrica-suppliers.com</p>
+          </div>
+      </div>
+
+  </div>
+</div>
+ <!-- Subscribe Section -->
+ <div class="container mx-auto ">
+  <!-- Subscribe Box -->
+  <div class="bg-gray-300 py-6 px-6 flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
+      <!-- Left Text -->
+      <div class="text-center ">
+          <h2 class="text-2xl font-semibold text-gray-800">Subscribe to Our Newsletter</h2>
+          <p class="text-gray-600 mt-2">Stay updated with our latest news and offers.</p>
+      </div>
+ <br>
+      <!-- Email Input and Subscribe Button -->
+      <div class="flex items-center w-full lg:w-auto">
+          <!-- Email Input -->
+          <input type="email" id="email" placeholder="Enter your email" 
+           class="w-full lg:w-72 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+          <!-- Subscribe Button -->
+          <button id="subscribeBtn" 
+          class="bg-blue-600 text-white px-6 py-2 rounded-r-lg hover:bg-blue-700 transition duration-300">
+              Subscribe
+          </button>
+      </div>
+  </div>
+</div>
+
+ <!-- Footer Section -->
+    <footer class="  py-10">
+        <div class="container mx-auto px-4">
+            <!-- Footer Flex Container -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-8 lg:space-y-0">
+                
+                <!-- Brand Section -->
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <img src="https://via.placeholder.com/40" alt="Logo" class="w-10 h-10">
+                        <h2 class="text-2xl font-bold">Brand Name</h2>
+                    </div>
+                    <p class="text-gray-400">Your tagline goes here</p>
+                    <p class="text-gray-400">Connecting people and businesses.</p>
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-3 mt-2">
+                        <a href="#" class="hover:text-blue-500">
+                            <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="hover:text-blue-400">
+                            <img src="https://img.icons8.com/ios-filled/30/ffffff/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="hover:text-blue-500">
+                            <img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="#" class="hover:text-pink-500">
+                            <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="hover:text-red-500">
+                            <img src="https://img.icons8.com/ios-filled/30/ffffff/youtube.png" alt="YouTube">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-3">About</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Find Store</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Categories</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Partnership Section -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-3">Partnership</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Find Store</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Categories</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Information Section -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-3">Information</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400">Help Center</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Money Refund</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Shipping</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- For Users Section -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-3">For Users</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400">Login</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Register</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Settings</a></li>
+                        <li><a href="#" class="hover:text-blue-400">My Orders</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get App Section -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-3 lg:mb-0">Get Our App</h3>
+                    <br>
+                    <!-- Apple Store Button -->
+                    <a href="#" class="bg-black text-white px-4 py-2 flex items-center space-x-2 rounded hover:bg-gray-700">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/apple-logo.png" alt="Apple">
+                        <span>Apple Store</span>
+                    </a>
+                    <br>
+                    <!-- Google Play Button -->
+                    <a href="#" class="bg-green-600 text-white px-4 py-2 flex items-center space-x-2 rounded hover:bg-green-700">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Google Play">
+                        <span>Google Play</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+   
+
+    <!-- Custom Footer Div -->
+    <div class="bg-gray-800 text-white py-4 px-6">
+        <div class="flex justify-between items-center">
+            <!-- Left Side -->
+            <div class="text-sm">
+                <span>@2023 Ecommerce</span>
+            </div>
+            
+            <!-- Center -->
+            <div class="text-lg font-semibold">
+                <span>Tania Tahreem</span>
+            </div>
+            
+            <!-- Right Side (Language and Flag) -->
+            <div class="flex items-center space-x-2">
+                <span>English</span>
+                <img src="https://img.icons8.com/ios-filled/30/ffffff/usa.png" alt="English Flag" class="w-6 h-6">
+            </div>
+        </div>
+    </div>
+
+<!-- Responsive Behavior -->
+<style>
+  @media (max-width: 768px) {
+    header .flex-grow {
+      flex-grow: 0;
+      width: 100%;
+    }
+
+    header .container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    header .flex-wrap {
+      flex-wrap: nowrap;
+    }
+  }
+
+
+</style>
+
+<script>
+  // Script to toggle mobile menu
+  document.querySelector('.lg:hidden').addEventListener('click', function () {
+    const mobileMenu = document.querySelector('.lg:hidden + div');
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // javascript for the image in background with inquiry form
+        document.getElementById('sendInquiry').addEventListener('click', function () {
+            // Get form data
+            const item = document.getElementById('item').value;
+            const details = document.getElementById('details').value;
+            const quantity = document.getElementById('quantity').value;
+            const pcs = document.getElementById('pcs').value;
+
+            // Example validation
+            if (!item || !details || !quantity || !pcs) {
+                alert("Please fill out all the fields!");
+                return;
+            }
+
+            // Output inquiry data
+            alert(`Inquiry Sent!\nItem: ${item}\nDetails: ${details}\nQuantity: ${quantity}\nPcs: ${pcs}`);
+        });
+
+           // JavaScript to handle the subscribe button click
+           document.getElementById("subscribeBtn").addEventListener("click", function() {
+            const emailInput = document.getElementById("email").value;
+            if (emailInput) {
+                alert("Thank you for subscribing with: " + emailInput);
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+
+    </script>
+    </body>
+    </html>
